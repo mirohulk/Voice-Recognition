@@ -1,70 +1,77 @@
 # Advanced Voice Recognition System
 
-This is an advanced voice recognition system built using Vosk, capable of understanding multiple English dialects with high accuracy.
+An advanced voice recognition system built using [Vosk](https://alphacephei.com/vosk/), designed for real-time speech-to-text transcription with support for various English dialects.
 
 ## Features
 
-- Real-time continuous speech recognition
-- Support for multiple English dialects
-- Confidence scoring for recognition results
-- Recognition history tracking
-- Robust error handling and logging
-- Thread-safe implementation
+- 🎙️ Real-time continuous speech recognition  
+- 🌎 Support for multiple English dialects  
+- 📊 Confidence scoring for recognition results  
+- 📝 Recognition history tracking  
+- 🧱 Robust error handling and logging  
+- 🔒 Thread-safe implementation  
 
 ## Prerequisites
 
-- Python 3.7 or higher
-- A working microphone
-- Sufficient disk space for the Vosk model (approximately 2GB)
+- Python 3.7 or higher  
+- A working microphone  
+- At least 2GB of free disk space for the speech recognition model  
 
 ## Installation
 
-1. Install the required dependencies:
+### 1. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Download the Vosk model:
-   - Visit https://alphacephei.com/vosk/models
-   - Download the desired English model (recommended: vosk-model-en-us-0.42)
-   - Extract the model to your project directory
+2. Download the Vosk Model
 
-## Usage
+This project uses the vosk-model-en-us-daanzu-20200905 model for high-accuracy English recognition.
+	•	Visit the Vosk Models Page
+	•	Scroll to the “Other models” section
+	•	Download the vosk-model-en-us-daanzu-20200905.zip
+Direct link: Download Model
+	•	Extract the downloaded ZIP file
+	•	Move the extracted folder (vosk-model-en-us-daanzu-20200905) into your project directory
 
-1. Make sure the Vosk model is in your project directory
-2. Run the voice recognition system:
+Usage
+	1.	Ensure the model folder is in the project directory
+	2.	Run the system:
+ 
 ```bash
 python voice_recognition.py
 ```
 
-3. Start speaking - the system will automatically:
-   - Detect and transcribe your speech
-   - Display the recognized text
-   - Show confidence scores for the recognition
-   - Store the recognition history
+	3.	Start speaking. The system will:
+	•	Detect your voice
+	•	Transcribe your speech
+	•	Display text and confidence scores
+	•	Log the recognition history
+	4.	Press Ctrl + C to stop the system
 
-4. Press Ctrl+C to stop the recognition
+Advanced Configuration
 
-## Advanced Configuration
+You can customize recognition behavior by changing parameters in the AdvancedVoiceRecognition class:
+	•	model_path: Path to the Vosk model directory
+	•	sample_rate: Audio sampling rate (default: 16000)
+	•	device: Microphone device ID (default: None to use system default)
 
-You can customize the voice recognition by modifying the following parameters when initializing the `AdvancedVoiceRecognition` class:
+Troubleshooting
 
-- `model_path`: Path to a different Vosk model
-- `sample_rate`: Audio sample rate (default: 16000)
-- `device`: Specific audio device ID (default: None, uses system default)
+Microphone Not Detected
+	•	Ensure it’s plugged in correctly
+	•	Try a different device ID
+	•	Close other applications that might be using the microphone
 
-## Troubleshooting
+Low Recognition Accuracy
+	•	Move to a quiet environment
+	•	Speak clearly and naturally
+	•	Test with a different Vosk model if needed
 
-1. If you encounter audio device issues:
-   - Check if your microphone is properly connected
-   - Try specifying a different audio device ID
-   - Ensure no other application is using the microphone
 
-2. If recognition accuracy is low:
-   - Try using a different Vosk model
-   - Ensure you're in a quiet environment
-   - Speak clearly and at a moderate pace
+License
 
-## License
+This project is licensed under the MIT License.
 
-This project is open source and available under the MIT License. 
+ 
